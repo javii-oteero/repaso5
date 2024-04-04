@@ -26,4 +26,14 @@ public class Time {
         }
         return this;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null || getClass() != obj.getClass())
+            return false;
+        Time time = (Time) obj;
+        return hora == time.hora && minuto == time.minuto && segundo == time.segundo;
+    }
 }
